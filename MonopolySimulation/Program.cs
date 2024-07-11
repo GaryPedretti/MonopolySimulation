@@ -8,4 +8,4 @@ for (int i = 0; i < 10; i++)
     d.Roll();
     Console.WriteLine("Die was rolled, result is: " + d.FaceValue);
 }
-Console.ReadLine();
+//Console.ReadLine();
