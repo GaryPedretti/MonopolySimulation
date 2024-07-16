@@ -26,7 +26,6 @@ namespace MonopolySimulation.Test
 
             //assert
 
-
             //Assert.True(actual >= numOfDice);
 
             Assert.InRange(actual, numOfDice, (numOfDice * 6));
