@@ -13,7 +13,7 @@ namespace MonopolySimulation.Tests2
             _game = new();
             _game.Setup(numberOfPlayers: _playerCount);
 
-            Square token = new();
+            Token token = new();
             _tokens = token.Tokens;
 
             _players = _game.Players;
@@ -61,10 +61,13 @@ namespace MonopolySimulation.Tests2
             Assert.Equal(40, _game.Squares.Count());
         }
 
-        [Fact(Skip = "Not implemented yet")]
+        [Fact]
         public void ShouldStartPlayersOnFirstSquare()
         {
-
+            foreach (var player in _game.Players)
+            {
+                Assert.Equal(0, player.CurrentPosition);
+            }
         }
 
         [Fact(Skip = "Not implemented yet")]
