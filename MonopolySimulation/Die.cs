@@ -11,6 +11,10 @@ namespace MonopolySimulation
         int _faceValue;
         static readonly Random _random = new();
 
+        public Die()
+        {
+            Roll();
+        }
         public int FaceValue {
             get
             {
