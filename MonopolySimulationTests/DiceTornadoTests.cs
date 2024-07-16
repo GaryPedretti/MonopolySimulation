@@ -1,40 +1,63 @@
-using MonopolySimulation;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MonopolySimulationTests
+namespace MonopolySimulation.Test
 {
-    public class DiceTornadoTests
+    public class WhenRollingMultipleDice //DiceTornedoTests
     {
-        [Fact]
-        public void TestSpin()
+        DiceTornedo dt;
+        public WhenRollingMultipleDice()
         {
-            DiceTornado dt = new ();
-            int numOfDice = 2;
-
-            int actual = dt.Spin(numOfDice);
-
-            Assert.True(actual >= numOfDice);
+            dt = new DiceTornedo();
         }
 
         [Fact]
-        public void MultipleSpinsShouldNotBeEqual()
+        public void ShouldHavetotalBetweenNumOfDiceAndNumOfDiceTimeSix()
         {
-            DiceTornado dt = new();
+            //arrange
+            // DiceTornedo dt = new();
             int numOfDice = 2;
-            bool rolledDifferent = false;
 
+            //act
+            int actual = dt.Spin(numOfDice);
+
+            //assert
+            //Assert.True(actual >= numOfDice);
+
+            Assert.InRange(actual, numOfDice, (numOfDice * 6));
+        }
+
+
+        [Fact]
+        public void ShouldChangeValueAfterMultipleSpin()
+        {
+
+            int numOfDice = 2;
+            int dieValue1 = dt.Spin(numOfDice);
+            int dieValue2 = dt.Spin(numOfDice);
+            bool rollwasDifferent = false;
             for (int i = 0; i < 1000; i++)
             {
-                int actual = dt.Spin(numOfDice);
-                int actual2 = dt.Spin(numOfDice);
-
-                if (actual != actual2)
+                rollwasDifferent = (dieValue1 != dieValue2);
+                if (rollwasDifferent)
                 {
-                    rolledDifferent = true;
                     break;
                 }
+                dieValue1 = dt.Spin(numOfDice);
+                // dieValue2 = d.Spin(numOfDice);
             }
+            Assert.True(rollwasDifferent);
+        }
 
-            Assert.True(rolledDifferent);
+        [Fact]
+        public void ShouldThrowExceptionWhenInvalidNumOfDice()
+        {
+            //Assert.Throws(typeof(System.ArgumentException), () => dt.Spin(0));
+            Assert.Throws<System.ArgumentException>(() => dt.Spin(0));
+
         }
     }
 }

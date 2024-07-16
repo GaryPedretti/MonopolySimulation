@@ -1,19 +1,25 @@
-﻿namespace MonopolySimulation
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MonopolySimulation
 {
-    public class DiceTornado
+    public class DiceTornedo
     {
         public int Spin(int numOfDice)
         {
-            Die die = new ();
-            int sum = 0;
-
+            if (numOfDice <= 0) { throw new System.ArgumentException(); }
+            //return numOfDice;
+            int spinToltal = 0;
+            Die d = new Die();
             for (int i = 0; i < numOfDice; i++)
             {
-                die.Roll();
-                sum += die.FaceValue;
+                d.Roll();
+                spinToltal = d.FaceValue;
             }
-
-            return sum;
+            return spinToltal;
         }
     }
 }
