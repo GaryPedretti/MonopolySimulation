@@ -1,4 +1,5 @@
 ﻿
+
 namespace MonopolySimulation
 {
     public class Player
@@ -12,6 +13,11 @@ namespace MonopolySimulation
             Token = token;
             CashAmount = 1500;
             CurrentSquare = currentSquare;
+        }
+
+        internal void TakeTurn()
+        {
+            throw new NotImplementedException();
         }
     }
 }

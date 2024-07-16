@@ -10,7 +10,7 @@ namespace MonopolySimulation
 
         public int PlayerCount { get { return _playerCount; } }// set; }
 
-        public IList<Player>? Players { get; set; }
+        public IList<Player> Players { get; set; }
         public MonopolyBoard Board { get; set; }
         public IList<Square> Squares { get
             { return Board.Squares; }  }
@@ -33,6 +33,22 @@ namespace MonopolySimulation
                 Player p = new Player(Squares.First(), tokens[i]);
                 Players.Add(p);
             }
+        }
+
+        public void PlayRounds(int numberOfRounds)
+        {
+            for (int i = 0; i < numberOfRounds; i++)
+            {
+                foreach (Player p in Players)
+                {
+                    p.TakeTurn();
+                }
+            }
+        }
+
+        internal class LoadedDie
+        {
+
         }
     }
 }

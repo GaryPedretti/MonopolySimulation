@@ -18,9 +18,14 @@ namespace MonopolySimulation.Tests2
             _players = _game.Players;
         }
 
-        [Fact]
+        [Fact(Skip ="only half implemented")]
         public void ShouldBeOnDifferentSquareAfterMove()
         {
+            _game.PlayRounds(1);
+            foreach (Player player in _players)
+            {
+                Assert.NotEqual(player.CurrentSquare, _game.Squares[0]);
+            }
 
         }
 

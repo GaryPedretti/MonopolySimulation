@@ -8,7 +8,7 @@ namespace MonopolySimulation
             if (numOfDice <= 0) { throw new System.ArgumentException(); }
             
             int spinTotal = 0;
-            Die d = new Die();
+            IDie d = new Die();
             for (int i = 0; i < numOfDice; i++)
             {
                 d.Roll();
