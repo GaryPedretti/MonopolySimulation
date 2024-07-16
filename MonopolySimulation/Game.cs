@@ -13,6 +13,7 @@
 
         public void Setup(int numberOfPlayers)
         {
+            if (numberOfPlayers < 2 || numberOfPlayers > 8) { throw new System.ArgumentException("Player count is not correct"); }
             for (int i = 0; i < numberOfPlayers; i++)
             {
                 Players.Add(new Player(i));

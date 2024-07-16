@@ -30,16 +30,20 @@ namespace MonopolySimulation.Tests2
             Assert.Equal(_playerCount, _game.PlayerCount);
         }
 
-        [Fact(Skip = "Not implemented yet")]
+        [Fact]
         public void ShouldNotAllowLessThan2Players()
         {
+            Game game = new();
 
+            Assert.Throws<System.ArgumentException>(() => game.Setup(1));
         }
 
-        [Fact(Skip = "Not implemented yet")]
+        [Fact]
         public void ShouldNotAllowMoreThan8Players()
         {
-
+            Game game = new();
+         
+            Assert.Throws<System.ArgumentException>(() => game.Setup(9));
         }
 
         [Fact]
