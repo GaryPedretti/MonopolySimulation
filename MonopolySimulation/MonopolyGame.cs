@@ -6,9 +6,10 @@ namespace MonopolySimulation
     public class MonopolyGame
     {
         private int _playerCount;
-        string[] tokens = ["dog", "sport car", "iron", "battleship", "top hat", "thimble", "wheelbarrow", "cat"];
 
         public int PlayerCount { get { return _playerCount; } }
+
+        private string[] _tokens;
 
         public IList<Player>? Players { get; set; }
         public MonopolyBoard Board { get; set; }
@@ -21,11 +22,12 @@ namespace MonopolySimulation
             Board = new MonopolyBoard();
         }
 
-        public void Setup(int numOfPlayers)
+        public void Setup(int numOfPlayers, string[] tokens)
         {
             if (numOfPlayers < 2 || numOfPlayers > 8)
                 throw new ArgumentException("Number of players must be between 2 and 8", "numOfPlayers");
 
+            _tokens = tokens;
             Players = new List<Player>(); 
             _playerCount = numOfPlayers;
             for (int i = 0; i < numOfPlayers; i++)
@@ -33,6 +35,11 @@ namespace MonopolySimulation
                 Player p = new Player(Squares.First(), tokens[i]);
                 Players.Add(p);
             }
+        }
+
+        public void PlayRounds(int numberOfRounds)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -14,9 +14,10 @@ namespace MonopolySimulation.Tests2
             _game = new();
             _tokens = ["dog", "sport car", "iron", "battleship", "top hat", "thimble", "wheelbarrow", "cat"];
             _numOfPlayers = 8;
-            _game.Setup(_numOfPlayers);
+            _game.Setup(_numOfPlayers, _tokens);
             _players = _game.Players;
         }
+
         [Fact]
         public void ShouldHaveCorrectNumberOfPlayers()
         {
@@ -38,7 +39,7 @@ namespace MonopolySimulation.Tests2
         {
             // act
             // need to call Setup again for a < 2
-            Assert.Throws<System.ArgumentException>(() => _game.Setup(1));
+            Assert.Throws<System.ArgumentException>(() => _game.Setup(1, _tokens));
         }
 
         [Fact]
@@ -46,7 +47,7 @@ namespace MonopolySimulation.Tests2
         {
             // act
             // need to call Setup again for a > 8
-            Assert.Throws<System.ArgumentException>(() => _game.Setup(9));
+            Assert.Throws<System.ArgumentException>(() => _game.Setup(9, _tokens));
         }
 
         [Fact]
