@@ -70,10 +70,13 @@ namespace MonopolySimulation.Tests2
             }
         }
 
-        [Fact(Skip = "Not implemented yet")]
+        [Fact]
         public void ShouldStartPlayersWith1500()
         {
-
+            foreach (var player in _game.Players)
+            {
+                Assert.Equal(1500, player.Funds);
+            }
         }
     }
 }
