@@ -5,10 +5,16 @@
         private int _playerCount { get; set; }
         public int PlayerCount => _playerCount;
         public IList<Player> Players { get; set; }
+        public IList<string> Squares { get; set; }
 
         public Game()
         {
             Players = new List<Player>();
+            Squares = new List<string>();
+            for (int i = 0; i < 40; i++)
+            {
+                Squares.Add("Square " + i);
+            }
         }
 
         public void Setup(int numberOfPlayers)

@@ -8,7 +8,7 @@ namespace MonopolySimulation
 
         public Player(int tokenId)
         {
-            Token token = new();
+            Square token = new();
             _tokens = token.Tokens;
 
             Token = _tokens[tokenId];

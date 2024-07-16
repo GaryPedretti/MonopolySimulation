@@ -1,12 +1,12 @@
 ﻿
 namespace MonopolySimulation
 {
-    public class Token
+    public class Square
     {
         private IList<string> _tokens;
         public IList<string> Tokens => _tokens;
 
-        public Token()
+        public Square()
         {
             _tokens = new List<string> {
                 "Battleship",

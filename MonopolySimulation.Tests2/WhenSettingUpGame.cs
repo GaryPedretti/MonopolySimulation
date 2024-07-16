@@ -13,7 +13,7 @@ namespace MonopolySimulation.Tests2
             _game = new();
             _game.Setup(numberOfPlayers: _playerCount);
 
-            Token token = new();
+            Square token = new();
             _tokens = token.Tokens;
 
             _players = _game.Players;
@@ -55,10 +55,10 @@ namespace MonopolySimulation.Tests2
             }
         }
 
-        [Fact(Skip = "Not implemented yet")]
+        [Fact]
         public void ShouldHave40Squares()
         {
-
+            Assert.Equal(40, _game.Squares.Count());
         }
 
         [Fact(Skip = "Not implemented yet")]
