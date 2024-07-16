@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace MonopolySimulation
 {
-    internal class Die
+    public class Die
     {
+        public Die() {
+            Roll();
+        }
         int _faceValue;
         public int FaceValue {
             get
