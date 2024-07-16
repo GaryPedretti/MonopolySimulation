@@ -39,7 +39,9 @@ namespace MonopolySimulation
 
         public void PlayRounds(int numberOfRounds)
         {
-            throw new NotImplementedException();
+            foreach (Player player in Players) {
+                player.CurrentSquare = new Square(); 
+            }
         }
     }
 }
