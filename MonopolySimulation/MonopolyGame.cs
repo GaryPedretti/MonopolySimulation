@@ -5,10 +5,20 @@ namespace MonopolySimulation
 {
     public class MonopolyGame
     {
+        string[] tokens = ["dog", "sport car", "iron", "battleship", "top hat", "thimble", "wheelbarrow", "cat"];
+
         private int _playerCount;
         public int PlayerCount { get { return _playerCount; } }
 
         public IList<Player> Players { get; set; }
+        public MonopolyBoard Board { get; set; }
+        public IList<Square> Squares { get { return Board.Squares; } }
+
+        public MonopolyGame(){
+            Players = new List<Player>();
+            Board = new MonopolyBoard();
+        }
+
 
         public void Setup(int numOfPlayers)
         {
@@ -22,7 +32,13 @@ namespace MonopolySimulation
             }
 
             _playerCount = numOfPlayers;
-            Players = [new Player("dog"), new Player("sport car"), new Player("iron"), new Player("battleship"), new Player("top hat"), new Player("thimble"), new Player("wheelbarrow"), new Player("cat")];
+            Players = new List<Player>();
+            for(int i = 0; i < _playerCount; i++)
+            {
+                Player p = new Player(tokens[i], Squares.First());
+                Players.Add(p);
+
+            }
 
         }
     }

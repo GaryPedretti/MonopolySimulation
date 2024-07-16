@@ -28,11 +28,6 @@ namespace MonopolySimulationTests
         [Fact]
         public void ShouldHaveCorrectNumberOfPlayers()
         {
-            //arrange
-            //int numOfPlayers = 8;
-
-            //act
-
             //assert
             Assert.Equal(numOfPlayers, game.PlayerCount);
         }
@@ -46,7 +41,7 @@ namespace MonopolySimulationTests
             Assert.Throws<ArgumentException>(() => g1.Setup(1));
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldNotAllowMoreThan8Players()
         {
             MonopolyGame g1 = new MonopolyGame();
@@ -68,22 +63,29 @@ namespace MonopolySimulationTests
 
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldHave40Squares()
         {
-
+            Assert.Equal(40, game.Squares.Count);
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldStartPlayersOnFirstSquare()
         {
-
+            foreach(var player in players)
+            {
+                //Assert.True(p.BoardPosition == 0, string.Format(""));
+                Assert.True(player.CurrentSquare == game.Squares[0], string.Format("Player {0} started on first square", player.Token));
+            }
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldStartPlayersWith1500()
         {
-
+            foreach (var player in players)
+            {
+                Assert.True(player.CashAmount == 1500, string.Format("Player {0} started with {1}", player.Token, player.CashAmount));
+            }
         }
     }
 }
