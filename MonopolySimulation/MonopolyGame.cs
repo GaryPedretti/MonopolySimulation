@@ -8,7 +8,7 @@ namespace MonopolySimulation
         private int _playerCount;
         string[] tokens = ["dog", "sport car", "iron", "battleship", "top hat", "thimble", "wheelbarrow", "cat"];
 
-        public int PlayerCount { get { return _playerCount; } }// set; }
+        public int PlayerCount { get { return _playerCount; } }
 
         public IList<Player>? Players { get; set; }
         public MonopolyBoard Board { get; set; }
