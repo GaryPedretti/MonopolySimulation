@@ -25,11 +25,12 @@ namespace MonopolySimulation.Test
             int actual = dt.Spin(numOfDice);
 
             //assert
+
+
             //Assert.True(actual >= numOfDice);
 
             Assert.InRange(actual, numOfDice, (numOfDice * 6));
         }
-
 
         [Fact]
         public void ShouldChangeValueAfterMultipleSpin()
