@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MonopolySimulation
+﻿namespace MonopolySimulation
 {
-    internal class Die
+    public class Die
     {
         int _faceValue;
         public int FaceValue {
@@ -16,6 +10,11 @@ namespace MonopolySimulation
             }
         }
         private static Random _random = new Random();
+
+        public Die()
+        {
+            Roll();
+        }
 
         public virtual void roll()
         {
