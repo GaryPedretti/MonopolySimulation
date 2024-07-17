@@ -1,4 +1,6 @@
-﻿namespace MonopolySimulation
+﻿using System.Runtime.InteropServices;
+
+namespace MonopolySimulation
 {
     public class MonopolyBoard
     {
@@ -9,11 +11,12 @@
         public MonopolyBoard()
         {
             Squares = new List<Square>();
-            for (int i = 0; i < _numberOfSquaresOnAMonopolyBoard; i++)
-            {
-                Squares.Add(new Square());
-            }
+            CreateSquares();
+            LinkSquares();
+        }
 
+        private void LinkSquares()
+        {
             for (int i = 0; i < _numberOfSquaresOnAMonopolyBoard; i++)
             {
                 var nextIndex = i + 1;
@@ -22,7 +25,14 @@
 
                 Squares[i].Next = Squares[nextIndex];
             }
+        }
 
+        private void CreateSquares()
+        {
+            for (int i = 0; i < _numberOfSquaresOnAMonopolyBoard; i++)
+            {
+                Squares.Add(new Square());
+            }
         }
     }
 }
