@@ -2,6 +2,8 @@
 {
     public class Square
     {
+        public string Name { get; set; }
+
         public Square NextSquare { get; set; }
 
         public virtual void LandedOn(Player p)
