@@ -110,5 +110,23 @@ namespace MonopolySimulation.Tests
             // assert
             Assert.Equal(newAmount, originalAmount - 200);
         }
+
+        [Fact]
+        public void ShouldPay10PercentOnIncomeTaxSquareWhenPlayerIsPoor()
+        {
+            Board board = new Board();
+            Player player = new Player(board.Squares[2], "BLAH");
+            player.CashAmount = 1000;
+            Die die1 = new LoadedDie(1);
+            Die die2 = new LoadedDie(1);
+            var originalAmount = player.CashAmount;
+
+            //act
+            player.TakeTurn(die1, die2);
+            var newAmount = player.CashAmount;
+
+            // assert
+            Assert.Equal(newAmount, originalAmount * 0.9);
+        }
     }
 }
