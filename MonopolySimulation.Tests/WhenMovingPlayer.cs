@@ -49,10 +49,19 @@ namespace MonopolySimulation.Tests
 
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldRoundTheBoard()
         {
-            //
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player(board.Squares[35], "BLAH");
+            Die die1 = new LoadedDie(4);
+            Die die2 = new LoadedDie(3);
+
+            //act
+            player.TakeTurn(die1, die2);
+
+            // assert
+            Assert.Equal(board.Squares[2], player.CurrentSquare);
         }
     }
 }
