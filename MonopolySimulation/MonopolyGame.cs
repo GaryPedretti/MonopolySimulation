@@ -56,7 +56,7 @@ namespace MonopolySimulation
                 {
                     p.TakeTurn(die1, die2);
                     _ui.SendUIMessage(string.Format("{0} rolls a {1}", p.Token, (die1.FaceValue + die2.FaceValue)));
-                    _ui.SendUIMessage(string.Format("{0} lands on square {1}", p.Token, p.CurrentSquare.ToString()));
+                    _ui.SendUIMessage(string.Format("{0} lands on square {1}", p.Token, p.CurrentSquare.Name));
                     _ui.SendUIMessage(string.Format("{0} has ${1}", p.Token, p.CashAmount));
                 }
             }

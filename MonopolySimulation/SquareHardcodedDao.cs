@@ -28,7 +28,7 @@ namespace MonopolySimulation
             }
             else
             {
-                return new Square();
+                return new Square() { Name= position.ToString() };
             }
         }
     }

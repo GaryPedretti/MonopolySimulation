@@ -2,6 +2,10 @@
 {
     public class LuxuryTaxSquare : Square
     {
+        public LuxuryTaxSquare() 
+        {
+            Name = "LuxuryTaxSquare";
+        }
         public override void LandedOn(Player p)
         {
             p.Debit(75);

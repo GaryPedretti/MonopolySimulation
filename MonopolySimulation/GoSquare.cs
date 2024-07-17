@@ -2,6 +2,10 @@
 {
     public class GoSquare : Square
     {
+        public GoSquare()
+        {
+            Name = "Go";
+        }
         
         public override void LandedOn(Player p)
         {
