@@ -28,6 +28,11 @@ namespace MonopolySimulation
             {
                 CurrentSquare = CurrentSquare.NextSquare;
             }
+
+            if (die1.FaceValue == die2.FaceValue)
+            {
+                TakeTurn(die1, die2);
+            }
         }
     }
 }

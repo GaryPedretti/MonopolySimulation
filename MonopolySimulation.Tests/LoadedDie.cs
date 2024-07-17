@@ -3,13 +3,20 @@ namespace MonopolySimulation.Tests
 {
     internal class LoadedDie : Die
     {
-        public LoadedDie(int loadedValue)
+        private Queue<int> _rollSequence = new();
+
+        public LoadedDie(int[] loadedValues)
         {
-            _faceValue = loadedValue;   
+            foreach (var loadedValue in loadedValues)
+            {
+                _rollSequence.Enqueue(loadedValue);
+            }
         }
 
         public override void Roll()
         {
+            _faceValue = _rollSequence.Dequeue();
+            _rollSequence.Enqueue(_faceValue);
         }
     }
 }
