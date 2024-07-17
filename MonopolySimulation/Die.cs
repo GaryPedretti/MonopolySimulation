@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonopolySimulation
 {
-    internal class Die
+    public class Die
     {
         int _faceValue;
         public int FaceValue {
@@ -15,12 +15,9 @@ namespace MonopolySimulation
                 return _faceValue;
             }
         }
+
         private static Random _random = new Random();
 
-        public virtual void roll()
-        {
-            
-        }
         public void Roll() {
             _faceValue = _random.Next(1, 7);
         }
