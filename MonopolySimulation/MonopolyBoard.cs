@@ -36,7 +36,10 @@ namespace MonopolySimulation
                 switch (i)
                 {
                     case 0: 
-                     squareToAdd = new GoSquare();
+                        squareToAdd = new GoSquare();
+                        break;
+                    case 38:
+                        squareToAdd = new LuxurySquare();
                         break;
                     default:
                         squareToAdd = new Square();
