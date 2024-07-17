@@ -16,11 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "propertySquares", "property
 		propertySquares\PropertySquares.csv = propertySquares\PropertySquares.csv
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zForLater", "ForLater\zForLater.csproj", "{7D63317D-FFB6-4AC3-BC35-84CB4563DF35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonopolySimulation.Tests", "MonopolySimulation.Tests\MonopolySimulation.Tests.csproj", "{6D629C4B-D019-45C8-91DD-88B485530408}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonopolySimulation.Tests", "MonopolySimulation.Tests\MonopolySimulation.Tests.csproj", "{6D629C4B-D019-45C8-91DD-88B485530408}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonopolySimulation.Tests2", "MonopolySimulation.Tests2\MonopolySimulation.Tests2.csproj", "{6062F419-7AA1-4361-AEDC-B919EF342092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonopolySimulation.Tests2", "MonopolySimulation.Tests2\MonopolySimulation.Tests2.csproj", "{6062F419-7AA1-4361-AEDC-B919EF342092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +30,6 @@ Global
 		{9069341E-64E8-4647-91EE-DC00D43DDF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9069341E-64E8-4647-91EE-DC00D43DDF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9069341E-64E8-4647-91EE-DC00D43DDF74}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D63317D-FFB6-4AC3-BC35-84CB4563DF35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D63317D-FFB6-4AC3-BC35-84CB4563DF35}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D63317D-FFB6-4AC3-BC35-84CB4563DF35}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D63317D-FFB6-4AC3-BC35-84CB4563DF35}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6D629C4B-D019-45C8-91DD-88B485530408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6D629C4B-D019-45C8-91DD-88B485530408}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D629C4B-D019-45C8-91DD-88B485530408}.Release|Any CPU.ActiveCfg = Release|Any CPU

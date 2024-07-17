@@ -1,11 +1,13 @@
 ﻿
 
+
+
 namespace MonopolySimulation
 {
     public class Player
     {
         public string Token { get; private set; }
-        public int CashAmount { get; private set; }
+        public int CashAmount { get; set; }
         public Square CurrentSquare { get; set; }
 
         public Player(Square currentSquare, string token)
@@ -19,10 +21,24 @@ namespace MonopolySimulation
         {
             die1.Roll();
             die2.Roll();
-            for (int i = 0; i < (die1.FaceValue + die2.FaceValue); i++)
+            int numberOfMoves = die1.FaceValue + die2.FaceValue;
+
+            for (int i = 0; i < numberOfMoves; i++)
             {
                 CurrentSquare = CurrentSquare.NextSquare;
+                CurrentSquare.PassedBy(this);
             }
+            CurrentSquare.LandedOn(this);
+        }
+
+        internal void Debit(int amountToDebit)
+        {
+            CashAmount -= amountToDebit;
+        }
+
+        internal void Credit(int amountToCredit)
+        {
+            CashAmount += amountToCredit;
         }
     }
 }
