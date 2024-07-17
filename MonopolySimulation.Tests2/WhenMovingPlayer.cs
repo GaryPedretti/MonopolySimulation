@@ -18,7 +18,7 @@ namespace MonopolySimulation.Tests2
             _players = _game.Players;
         }
 
-        [Fact(Skip ="only half implemented")]
+        [Fact]
         public void ShouldBeOnDifferentSquareAfterMove()
         {
             _game.PlayRounds(1);
@@ -29,16 +29,38 @@ namespace MonopolySimulation.Tests2
 
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldMoveCorrectNumberOfSquares()
         {
+            //arrange
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player(board.Squares[0],"BLAH");
 
+            Die die1 = new LoadedDie(4);
+            Die die2 = new LoadedDie(3);
+            //act
+            player.TakeTurn(die1, die2);
+
+            //assert
+            Assert.Equal(board.Squares[7], player.CurrentSquare);
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldRoundTheBoard()
         {
+            //arrange
+            MonopolyBoard board = new MonopolyBoard();
+            // player setup on Boardwalk to start
+            Player player = new Player(board.Squares[39], "BLAH");
 
+            Die die1 = new LoadedDie(1);
+            Die die2 = new LoadedDie(2);
+            //act
+            player.TakeTurn(die1, die2);
+
+            //assert
+            // wound past boardwalk to go and beyond
+            Assert.Equal(board.Squares[2], player.CurrentSquare);
         }
     }
 }

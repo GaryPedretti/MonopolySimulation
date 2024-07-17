@@ -15,9 +15,14 @@ namespace MonopolySimulation
             CurrentSquare = currentSquare;
         }
 
-        internal void TakeTurn()
+        public void TakeTurn(Die die1, Die die2)
         {
-            throw new NotImplementedException();
+            die1.Roll();
+            die2.Roll();
+            for (int i = 0; i < (die1.FaceValue + die2.FaceValue); i++)
+            {
+                CurrentSquare = CurrentSquare.NextSquare;
+            }
         }
     }
 }
