@@ -8,7 +8,8 @@ namespace MonopolySimulation
 {
     public class Die
     {
-        int _faceValue;
+        protected int _faceValue;
+
         public int FaceValue {
             get
             {
@@ -18,7 +19,7 @@ namespace MonopolySimulation
 
         private static Random _random = new Random();
 
-        public void Roll() {
+        public virtual void Roll() {
             _faceValue = _random.Next(1, 7);
         }
     }

@@ -34,24 +34,42 @@
             }
         }
 
-        [Fact(Skip = "TODO")]
+        [Fact]
         public void ShouldMoveCorrectNumberOfSquares()
         {
             // Arrange
+            Board board = new();
+            Player player = new("crash test dummy", board.getFirstSquare(), 1);
+            Die loadedDie1 = new LoadedDie(4);
+            Die loadedDie2 = new LoadedDie(3);
+            Square expectedSquare = board.getFirstSquare();
+            for (int i = 0; i < 7; i++)
+            {
+                expectedSquare = expectedSquare.NextSquare;
+            }
 
             // Act
+            player.TakeTurn(loadedDie1, loadedDie2);
 
             // Assert
+            Assert.Equal(expectedSquare, player.CurrentSquare);
         }
 
-        [Fact(Skip = "TODO")]
+        [Fact]
         public void ShouldRoundTheBoard()
         {
             // Arrange
+            Board board = new();
+            Player player = new("crash test dummy", board.getFirstSquare(), 1);
+            Die loadedDie1 = new LoadedDie(20);
+            Die loadedDie2 = new LoadedDie(20);
+            Square expectedSquare = board.getFirstSquare();
 
             // Act
+            player.TakeTurn(loadedDie1, loadedDie2);
 
             // Assert
+            Assert.Equal(expectedSquare, player.CurrentSquare);
         }
     }
 }
