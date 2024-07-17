@@ -5,4 +5,4 @@ using MonopolySimulation;
 
 MonopolyGame game = new MonopolyGame();
 game.Setup(3);
-game.PlayRounds(5);
+game.PlayRounds(10);

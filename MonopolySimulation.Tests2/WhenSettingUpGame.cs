@@ -12,7 +12,8 @@ namespace MonopolySimulation.Tests2
         public WhenSettingUpGame()
         {
             _game = new();
-            _tokens = ["dog", "sport car", "iron", "battleship", "top hat", "thimble", "wheelbarrow", "cat"];
+            _tokens = ["Dog", "Sport Car", "Iron", "Battleship", "Top Hat", 
+                "Thimble", "Wheelbarrow", "Cat"];
             _numOfPlayers = 8;
             _game.Setup(_numOfPlayers);
             _players = _game.Players;
