@@ -18,12 +18,14 @@ namespace MonopolySimulation.Tests2
             _game.Setup(_numOfPlayers);
             _players = _game.Players;
         }
+
         [Fact]
         public void ShouldHaveCorrectNumberOfPlayers()
         {
             // assert
             Assert.Equal(_numOfPlayers, _game.PlayerCount);
         }
+
         [Fact]
         public void ShouldHaveCorrectTokens()
         {
@@ -55,12 +57,14 @@ namespace MonopolySimulation.Tests2
         {
             Assert.Equal(40, _game.Squares.Count);
         }
+
         [Fact]
         public void ShouldStartPlayersOnFirstSquare()
         {
             foreach(Player p in _players)
             {
-                Assert.True(p.CurrentSquare == _game.Squares[0], string.Format( "Player {0} is not on the first square.", p.Token));
+                Assert.True(p.CurrentSquare == _game.Squares[0], 
+                    string.Format( "Player {0} is not on the first square.", p.Token));
             }
         }
 
@@ -69,7 +73,9 @@ namespace MonopolySimulation.Tests2
         {
             foreach (Player p in _players)
             {
-                Assert.True(p.CashAmount == 1500, string.Format("Player {0} does not have $1,500 (actually has ${1}).", p.Token, p.CashAmount));
+                Assert.True(p.CashAmount == 1500, 
+                    string.Format("Player {0} does not have $1,500 (actually has ${1}).", 
+                    p.Token, p.CashAmount));
             }
         }
     }
