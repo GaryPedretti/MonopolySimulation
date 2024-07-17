@@ -40,5 +40,25 @@ namespace MonopolySimulation.Tests
             Assert.Equal(newAmount, originalAmount + 200);
         }
 
+
+        [Fact]
+        public void ShouldGet200WhenPassingGo()
+        {
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player(board.Squares[37], "BLAH");
+            Die die1 = new LoadedDie(2);
+            Die die2 = new LoadedDie(2);
+            var originalAmount = player.CashAmount;
+
+            //act
+            player.TakeTurn(die1, die2);
+            var newAmount = player.CashAmount;
+
+            // assert
+            Assert.Equal(newAmount, originalAmount + 200);
+        }
+
+
+
     }
 }
