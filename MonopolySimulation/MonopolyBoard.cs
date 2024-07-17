@@ -31,7 +31,18 @@ namespace MonopolySimulation
         {
             for (int i = 0; i < _numberOfSquaresOnAMonopolyBoard; i++)
             {
-                Squares.Add(new Square());
+                Square squareToAdd;
+
+                switch (i)
+                {
+                    case 0: 
+                     squareToAdd = new GoSquare();
+                        break;
+                    default:
+                        squareToAdd = new Square();
+                        break;
+                }
+                Squares.Add(squareToAdd);
             }
         }
     }

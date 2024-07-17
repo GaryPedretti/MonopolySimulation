@@ -5,7 +5,7 @@ namespace MonopolySimulation
     public class Player
     {
         public string Token { get; private set; }
-        public int CashAmount { get; private set; }
+        public int CashAmount { get; set; }
         public Square CurrentSquare { get; set; }
 
         public Player(Square currentSquare, string token)
@@ -23,8 +23,10 @@ namespace MonopolySimulation
 
             for (int i = 0; i < numOfSquares; i++) {
                 this.CurrentSquare = this.CurrentSquare.Next;
+
             }
 
+            this.CurrentSquare.LandedOn(this);
         }
     }
 }
