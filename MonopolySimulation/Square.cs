@@ -1,4 +1,5 @@
 ﻿
+
 namespace MonopolySimulation
 {
     public class Square
@@ -6,5 +7,10 @@ namespace MonopolySimulation
         public Square Next { get; set; }
 
         public virtual void LandedOn(Player player) { }
+
+        internal virtual void PassedBy(Player player)
+        {
+            
+        }
     }
 }

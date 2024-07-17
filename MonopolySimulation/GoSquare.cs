@@ -7,5 +7,10 @@ namespace MonopolySimulation
         {
             player.CashAmount += 200;
         }
+
+        internal override void PassedBy(Player player)
+        {
+            player.CashAmount += 200;
+        }
     }
 }

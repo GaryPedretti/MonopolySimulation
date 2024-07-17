@@ -21,12 +21,19 @@ namespace MonopolySimulation
             die2.Roll();
             var numOfSquares = die1.FaceValue + die2.FaceValue;
 
-            for (int i = 0; i < numOfSquares; i++) {
+            for (int i = 0; i < numOfSquares; i++)
+            {
                 this.CurrentSquare = this.CurrentSquare.Next;
-
+                var isLastSquare = (i + 1) == numOfSquares;
+                if ((isLastSquare))
+                {
+                    this.CurrentSquare.LandedOn(this);
+                }
+                else
+                {
+                    this.CurrentSquare.PassedBy(this);
+                }
             }
-
-            this.CurrentSquare.LandedOn(this);
         }
     }
 }
