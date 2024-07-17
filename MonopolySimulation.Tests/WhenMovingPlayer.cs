@@ -4,7 +4,7 @@ namespace MonopolySimulation.Tests
 {
     public class WhenMovingPlayer
     {
-        private MonopolyGame _game;
+        private Game _game;
         string[] _tokens;
         IList<Player> _players;
         int _numOfPlayers;
@@ -22,7 +22,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldBeOnDifferentSquareAfterMove()
         {
-            var game = new MonopolyGame();
+            var game = new Game();
             game.Setup(2, new string[] { "a", "b" });
             game.PlayRounds(1);
             var firstSquare = _game.Squares.First();
@@ -36,7 +36,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldMoveCorrectNumberOfSquares()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[0], "BLAH");        
             Die die1 = new LoadedDie(4);
             Die die2 = new LoadedDie(3);
@@ -52,7 +52,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldRoundTheBoard()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[35], "BLAH");
             Die die1 = new LoadedDie(4);
             Die die2 = new LoadedDie(3);

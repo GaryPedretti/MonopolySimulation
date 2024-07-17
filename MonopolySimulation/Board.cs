@@ -2,13 +2,13 @@
 
 namespace MonopolySimulation
 {
-    public class MonopolyBoard
+    public class Board
     {
         private static readonly int _numberOfSquaresOnAMonopolyBoard = 40;
 
         public IList<Square> Squares { get; set; }
 
-        public MonopolyBoard()
+        public Board()
         {
             Squares = new List<Square>();
             CreateSquares();

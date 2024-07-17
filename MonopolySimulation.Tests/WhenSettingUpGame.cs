@@ -4,7 +4,7 @@ namespace MonopolySimulation.Tests2
 {
     public class WhenSettingUpGame
     {
-        private MonopolyGame _game;
+        private Game _game;
         string[] _tokens;
         IList<Player> _players;
         int _numOfPlayers;

@@ -8,7 +8,7 @@ namespace MonopolySimulation.Tests
 {
     public class WhenLandingOnMoneySquare
     {
-        private MonopolyGame _game;
+        private Game _game;
         string[] _tokens;
         IList<Player> _players;
         int _numOfPlayers;
@@ -26,7 +26,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldGet200WhenLandingOnGo()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[37], "BLAH");
             Die die1 = new LoadedDie(1);
             Die die2 = new LoadedDie(2);
@@ -44,7 +44,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldGet200WhenPassingGo()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[37], "BLAH");
             Die die1 = new LoadedDie(2);
             Die die2 = new LoadedDie(2);
@@ -61,7 +61,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldNotDoubleDipOnGo()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[37], "BLAH");
             Die die1 = new LoadedDie(1);
             Die die2 = new LoadedDie(2);
@@ -79,7 +79,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldPay75OnLuxurySquare()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[36], "BLAH");
             Die die1 = new LoadedDie(1);
             Die die2 = new LoadedDie(1);
@@ -96,7 +96,7 @@ namespace MonopolySimulation.Tests
         [Fact]
         public void ShouldPay200OnIncomeTaxSquareWhenPlayerIsRich()
         {
-            MonopolyBoard board = new MonopolyBoard();
+            Board board = new Board();
             Player player = new Player(board.Squares[2], "BLAH");
             player.CashAmount = 3000;
             Die die1 = new LoadedDie(1);

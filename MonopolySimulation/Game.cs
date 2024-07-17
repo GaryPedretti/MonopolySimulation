@@ -3,7 +3,7 @@
 
 namespace MonopolySimulation
 {
-    public class MonopolyGame
+    public class Game
     {
         private int _playerCount;
 
@@ -12,14 +12,14 @@ namespace MonopolySimulation
         private string[] _tokens;
 
         public IList<Player>? Players { get; set; }
-        public MonopolyBoard Board { get; set; }
+        public Board Board { get; set; }
         public IList<Square> Squares { get
             { return Board.Squares; }  }
 
-        public MonopolyGame()
+        public Game()
         {
             Players = new List<Player>();
-            Board = new MonopolyBoard();
+            Board = new Board();
         }
 
         public void Setup(int numOfPlayers, string[] tokens)
