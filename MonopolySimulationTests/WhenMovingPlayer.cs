@@ -37,7 +37,16 @@ namespace MonopolySimulationTests
         [Fact(Skip = "not implemented yet")]
         public void ShouldMoveCorrectNumberOfSquares()
         {
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player("Blah", board.Squares[0]);
+            Die die1 = new LoadedDie(4);
+            Die die2 = new LoadedDie(3);
 
+            //act
+            player.TakeTurn(die1, die2);
+
+            //assert
+            Assert.Equal(board.Squares[7], player.CurrentSquare);
         }
 
         [Fact(Skip = "not implemented yet")]
