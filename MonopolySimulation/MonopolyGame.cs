@@ -26,7 +26,7 @@ namespace MonopolySimulation
             {
                 throw new ArgumentException("Number of players should be more than 1");
             }
-            if (numOfPlayers > 9)
+            if (numOfPlayers > 8)
             {
                 throw new ArgumentException("Number of players should be less than 9");
             }
