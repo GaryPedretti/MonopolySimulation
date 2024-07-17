@@ -38,6 +38,9 @@ namespace MonopolySimulation
                     case 0: 
                         squareToAdd = new GoSquare();
                         break;
+                    case 4:
+                        squareToAdd = new IncomeTaxSquare();
+                        break;
                     case 38:
                         squareToAdd = new LuxurySquare();
                         break;
