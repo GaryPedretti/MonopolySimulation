@@ -8,6 +8,7 @@
             {
                 return _faceValue;
             }
+            set { _faceValue = value; }
         }
         private static Random _random = new Random();
 
@@ -16,11 +17,8 @@
             Roll();
         }
 
-        public virtual void roll()
+        public virtual void Roll()
         {
-            
-        }
-        public void Roll() {
             _faceValue = _random.Next(1, 7);
         }
     }

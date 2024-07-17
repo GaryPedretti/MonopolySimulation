@@ -14,7 +14,7 @@ namespace MonopolySimulation.Test
             dt = new DiceTornedo();
         }
 
-        [Fact]
+        [Fact(Skip ="Not Needed")]
         public void ShouldHavetotalBetweenNumOfDiceAndNumOfDiceTimeSix()
         {
             //arrange

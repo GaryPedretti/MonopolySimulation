@@ -1,4 +1,5 @@
 ﻿
+
 namespace MonopolySimulation
 {
     public class Player
@@ -16,6 +17,12 @@ namespace MonopolySimulation
             Funds = 1500;
 
             Token = _tokens[tokenId];
+        }
+
+        public void TakeTurn(Die die1, Die die2)
+        {
+            var spacesToMove = die1.FaceValue + die2.FaceValue;
+            CurrentPosition = +spacesToMove;
         }
     }
 }
