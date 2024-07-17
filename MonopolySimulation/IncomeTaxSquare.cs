@@ -5,7 +5,15 @@ namespace MonopolySimulation
     {
         public override void LandedOn(Player player)
         {            
-            player.CashAmount -= 200;
+            if (player.CashAmount < 2000)
+            {
+                var amountToPay = player.CashAmount * .1;
+                player.CashAmount -= (int)amountToPay;
+            }
+            else
+            {
+                player.CashAmount -= 200;
+            }
         }
     }
 }

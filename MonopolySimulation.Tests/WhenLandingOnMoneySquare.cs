@@ -126,7 +126,7 @@ namespace MonopolySimulation.Tests
             var newAmount = player.CashAmount;
 
             // assert
-            Assert.Equal(newAmount, originalAmount * 0.9);
+            Assert.Equal(newAmount, originalAmount - 100);
         }
     }
 }
