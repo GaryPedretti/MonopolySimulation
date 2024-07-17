@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-namespace MonopolySimulation.Tests2
+namespace MonopolySimulation.Tests
 {
     public class WhenMovingPlayer
     {
@@ -33,16 +33,26 @@ namespace MonopolySimulation.Tests2
             }
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldMoveCorrectNumberOfSquares()
         {
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player(board.Squares[0], "BLAH");        
+            Die die1 = new LoadedDie(4);
+            Die die2 = new LoadedDie(3);
+
+            //act
+            player.TakeTurn(die1, die2);
+
+            // assert
+            Assert.Equal(board.Squares[7], player.CurrentSquare);
 
         }
 
         [Fact(Skip = "not implemented yet")]
         public void ShouldRoundTheBoard()
         {
-
+            //
         }
     }
 }

@@ -14,6 +14,15 @@
                 Squares.Add(new Square());
             }
 
+            for (int i = 0; i < _numberOfSquaresOnAMonopolyBoard; i++)
+            {
+                var nextIndex = i + 1;
+                if (nextIndex == _numberOfSquaresOnAMonopolyBoard)
+                    nextIndex = 0;
+
+                Squares[i].Next = Squares[nextIndex];
+            }
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace MonopolySimulation
         {
             Roll();
         }
-        public int FaceValue {
+        public virtual int FaceValue {
             get
             {
                 return _faceValue;
