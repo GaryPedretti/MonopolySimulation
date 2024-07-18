@@ -2,13 +2,14 @@
 {
     public class PropertySquare : Square
     {
-        public string Name => "Random Property";
+        public string Name { get; private set; }
 
         public Square NextSquare { get; set; }
 
-        public PropertySquare()
+        public PropertySquare(string name)
         {
             NextSquare = this;
+            Name = name;
         }
 
         public void LandedOn(Player player)

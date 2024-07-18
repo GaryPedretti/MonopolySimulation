@@ -8,56 +8,11 @@ namespace MonopolySimulation
 
         public readonly IList<Square> Squares;
 
-        public Board()
-        {
-            Squares = [
-                new GoSquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new IncomeTaxSquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new PropertySquare(),
-                new LuxuryTaxSquare(),
-                new PropertySquare()
-            ];
-            for (int squareCount = 0; squareCount < Squares.Count - 1 ;  squareCount++)
-            {
-                Squares[squareCount].NextSquare = Squares[squareCount + 1];
-            }
+        public Board() : this(new MonopolySquareRepository()) { }
 
-            Squares.Last().NextSquare = Squares.First();
+        public Board(ISquareRepository squareRepository)
+        {
+            Squares = squareRepository.GetAllSquares();
         }
 
         public int getCountOfSquares()

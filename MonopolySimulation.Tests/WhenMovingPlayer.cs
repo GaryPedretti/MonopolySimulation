@@ -38,11 +38,10 @@
         public void ShouldMoveCorrectNumberOfSquares()
         {
             // Arrange
-            Board board = new();
-            Player player = new("crash test dummy", board.getFirstSquare(), 1);
+            Player player = new("crash test dummy", _board.getFirstSquare(), 1);
             Die loadedDie1 = new LoadedDie([4]);
             Die loadedDie2 = new LoadedDie([3]);
-            Square expectedSquare = board.Squares[7];
+            Square expectedSquare = _board.Squares[7];
 
             // Act
             player.TakeTurn(loadedDie1, loadedDie2);
@@ -55,11 +54,10 @@
         public void ShouldRoundTheBoard()
         {
             // Arrange
-            Board board = new();
-            Player player = new("crash test dummy", board.getFirstSquare(), 1);
+            Player player = new("crash test dummy", _board.getFirstSquare(), 1);
             Die loadedDie1 = new LoadedDie([21]);
             Die loadedDie2 = new LoadedDie([19]);
-            Square expectedSquare = board.getFirstSquare();
+            Square expectedSquare = _board.getFirstSquare();
 
             // Act
             player.TakeTurn(loadedDie1, loadedDie2);
@@ -72,11 +70,10 @@
         public void ShouldPlayerTakeExtraTurnWhenRollingDoubles()
         {
             // Arrange
-            Board board = new();
-            Player player = new("crash test dummy", board.getFirstSquare(), 1);
+            Player player = new("crash test dummy", _board.getFirstSquare(), 1);
             Die loadedDie1 = new LoadedDie([2, 1]);
             Die loadedDie2 = new LoadedDie([2, 5]);
-            Square expectedSquare = board.Squares[10];
+            Square expectedSquare = _board.Squares[10];
 
             // Act
             player.TakeTurn(loadedDie1, loadedDie2);

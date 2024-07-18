@@ -2,13 +2,14 @@
 {
     public class LuxuryTaxSquare : Square
     {
-        public string Name => " Luxury Tax ";
+        public string Name { get; private set; }
 
         public Square NextSquare { get; set; }
 
-        public LuxuryTaxSquare()
+        public LuxuryTaxSquare(string name)
         {
             NextSquare = this;
+            Name = name;
         }
 
         public void LandedOn(Player player)

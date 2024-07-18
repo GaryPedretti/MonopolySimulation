@@ -2,13 +2,14 @@
 {
     internal class IncomeTaxSquare : Square
     {
-        public string Name => " Income Tax ";
+        public string Name { get; private set; }
 
         public Square NextSquare { get; set; }
 
-        public IncomeTaxSquare()
+        public IncomeTaxSquare(string name)
         {
             NextSquare = this;
+            Name = name;
         }
 
         public void LandedOn(Player player)

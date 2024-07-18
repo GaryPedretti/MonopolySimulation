@@ -2,6 +2,20 @@
 {
     public class WhenLandingOnSpecialtySquares
     {
+        private static readonly string[] _expectedSquares = [
+            "Go", "Mediterranean Avenue",
+            "Community Chest", "Baltic Avenue", "Income Tax", "Reading Railroad",
+            "Oriental Avenue", "Chance", "Vermont Avenue", "Connecticut Avenue",
+            "Jail", "St. Charles Place", "Electric Company", "States Avenue",
+            "Virginia Avenue", "Pennsylvania Railroad", "St. James Place",
+            "Community Chest", "Tennessee Avenue", "New York Avenue", "Free Parking",
+            "Kentucky Avenue", "Chance", "Indiana Avenue", "Illinois Avenue",
+            "B & O Railroad", "Atlantic Avenue", "Ventor Avenue", "Water Works",
+            "Marvin Gardens", "Go To Jail", "Pacific Avenue", "North Carolina Avenue",
+            "Community Chest", "Pennsylvania Avenue", "Short Line Railroad",
+            "Chance", "Park Place", "Luxury Tax", "Boardwalk"
+        ];
+
         private const int _initialRichFunds = 2500;
         private const int _initialPoorFunds = 1500;
         private readonly Board _board = new Board();

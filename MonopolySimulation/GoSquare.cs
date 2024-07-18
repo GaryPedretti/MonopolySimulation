@@ -2,12 +2,13 @@
 {
     public class GoSquare : Square
     {
-        public string Name => " Go ";
+        public string Name { get; private set; }
 
         public Square NextSquare { get; set; }
 
-        public GoSquare() {
+        public GoSquare(string name) {
             NextSquare = this;
+            Name = name;
         }
 
         public void LandedOn(Player player)
