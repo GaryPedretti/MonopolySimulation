@@ -23,18 +23,18 @@ namespace MonopolySimulationTests
             _players = _game.Players;
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldBeOnDifferentSquareAfterMove()
         {
-            //_game.PlayRounds(1);
-            //foreach (Player player in _players)
-            //{
-            //    Assert.NotEqual(player.CurrentSquare, _game.Squares[0]);
-            //}
+            _game.PlayRounds(1);
+            foreach (Player player in _players)
+            {
+                Assert.NotEqual(player.CurrentSquare, _game.Squares[0]);
+            }
 
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldMoveCorrectNumberOfSquares()
         {
             MonopolyBoard board = new MonopolyBoard();
@@ -49,10 +49,19 @@ namespace MonopolySimulationTests
             Assert.Equal(board.Squares[7], player.CurrentSquare);
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldRoundTheBoard()
         {
+            MonopolyBoard board = new MonopolyBoard();
+            Player player = new Player("Blah", board.Squares[39]);
+            Die die1 = new LoadedDie(1);
+            Die die2 = new LoadedDie(2);
 
+            //act
+            player.TakeTurn(die1, die2);
+
+            //assert
+            Assert.Equal(board.Squares[2], player.CurrentSquare);
         }
     }
 }

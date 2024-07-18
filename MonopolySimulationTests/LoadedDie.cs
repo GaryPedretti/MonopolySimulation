@@ -4,11 +4,11 @@ namespace MonopolySimulationTests
 {
     internal class LoadedDie : Die
     {
-        private int faceValue;
+        //private int faceValue;
 
         public LoadedDie(int v)
         {
-            this.faceValue = v;
+            this.FaceValue = v;
         }
     }
 }

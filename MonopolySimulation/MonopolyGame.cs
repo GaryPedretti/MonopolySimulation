@@ -1,6 +1,8 @@
 ﻿
 
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MonopolySimulation
 {
     public class MonopolyGame
@@ -19,6 +21,8 @@ namespace MonopolySimulation
             Board = new MonopolyBoard();
         }
 
+        public Die Die1 { get; set; }
+        public Die Die2 { get; set; }
 
         public void Setup(int numOfPlayers)
         {
@@ -40,6 +44,17 @@ namespace MonopolySimulation
 
             }
 
+        }
+
+        public void PlayRounds(int numberOfRounds)
+        {
+            for (int i = 0; i < numberOfRounds; i++)
+            {
+                foreach (Player p in Players)
+                {
+                    p.TakeTurn(Die1, Die2);
+                }
+            }
         }
     }
 }

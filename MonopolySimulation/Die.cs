@@ -17,6 +17,10 @@ namespace MonopolySimulation
             {
                 return _faceValue;
             }
+            set
+            {
+                _faceValue = value;
+            }
         }
         private static Random _random = new Random();
 
