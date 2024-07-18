@@ -74,15 +74,15 @@ namespace MonopolySimulation.Tests
             Assert.Equal(_game.Board.Squares.Count, monopolySquares);
         }
 
-        [Fact(Skip = "not implemented yet")]
+        [Fact]
         public void ShouldStartPlayersOnFirstSquare()
         {
             // arrange
             // act // assert
-            //for (int i = 0; i < _players.Count; i++)
-            //{
-            //    Assert.Equal(_game.Players[i].Funds, initialFunds);
-            //}
+            for (int i = 0; i < _players.Count; i++)
+            {
+                Assert.Equal(_game.Players[i].CurrentSquare, _game.Board.Squares[0] );
+            }
         }
 
         [Fact]

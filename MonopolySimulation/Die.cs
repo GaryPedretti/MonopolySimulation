@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MonopolySimulation
 {
-    internal class Die
+    public class Die
     {
         int _faceValue;
         public int FaceValue {
