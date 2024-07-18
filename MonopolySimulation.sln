@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "propertySquares", "propertySquares", "{2D91ECBC-B8CD-4C20-BB9D-C80D5E4D6694}"
 	ProjectSection(SolutionItems) = preProject
+		ChicagoMonopolyPropertyValues.txt = ChicagoMonopolyPropertyValues.txt
 		propertySquares\createProperties.txt = propertySquares\createProperties.txt
 		propertySquares\PropertySquares.csv = propertySquares\PropertySquares.csv
 	EndProjectSection
