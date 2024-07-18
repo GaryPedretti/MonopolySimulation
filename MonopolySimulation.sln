@@ -12,14 +12,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "propertySquares", "propertySquares", "{2D91ECBC-B8CD-4C20-BB9D-C80D5E4D6694}"
 	ProjectSection(SolutionItems) = preProject
-		ChicagoMonopolyPropertyValues.txt = ChicagoMonopolyPropertyValues.txt
+		propertySquares\createProperties.sql = propertySquares\createProperties.sql
 		propertySquares\createProperties.txt = propertySquares\createProperties.txt
 		propertySquares\PropertySquares.csv = propertySquares\PropertySquares.csv
+		propertySquares\PropertySquaresName.csv = propertySquares\PropertySquaresName.csv
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonopolySimulation.Tests", "MonopolySimulation.Tests\MonopolySimulation.Tests.csproj", "{6D629C4B-D019-45C8-91DD-88B485530408}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonopolySimulation.Tests", "MonopolySimulation.Tests\MonopolySimulation.Tests.csproj", "{6D629C4B-D019-45C8-91DD-88B485530408}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonopolySimulation.Tests2", "MonopolySimulation.Tests2\MonopolySimulation.Tests2.csproj", "{6062F419-7AA1-4361-AEDC-B919EF342092}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonopolySimulation.Tests2", "MonopolySimulation.Tests2\MonopolySimulation.Tests2.csproj", "{6062F419-7AA1-4361-AEDC-B919EF342092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

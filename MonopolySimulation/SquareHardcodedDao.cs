@@ -28,15 +28,15 @@ namespace MonopolySimulation
         {
             if (position == _positionOfGoSquare)
             {
-                return new GoSquare();
+                return new GoSquare() { Name = _propertyNames[position] };
             }
             else if (position == _positionOfLuxuryTaxSquare)
             {
-                return new LuxuryTaxSquare();
+                return new LuxuryTaxSquare() { Name = _propertyNames[position] };
             }
             else if (position == _positionOfIncomeTaxSquare)
             {
-                return new IncomeTaxSquare();
+                return new IncomeTaxSquare() { Name = _propertyNames[position] };
             }
             else
             {
