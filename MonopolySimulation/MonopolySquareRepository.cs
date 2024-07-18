@@ -5,7 +5,7 @@ namespace MonopolySimulation
     {
         private readonly IList<Square> _squares;
 
-        public MonopolySquareRepository() : this(new CSVDataAdapter(File.ReadAllText("squares.csv")))
+        public MonopolySquareRepository() : this(new CSVDataAdapter())
         {
 
         }

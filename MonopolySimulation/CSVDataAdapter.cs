@@ -5,9 +5,15 @@ namespace MonopolySimulation
     {
         private readonly List<List<string>> _csvData;
 
-        public CSVDataAdapter(string rawCSVContent)
+        public CSVDataAdapter() : this("squares.csv")
         {
-            this._csvData = rawCSVContent.Split(Environment.NewLine).Select(line => line.Split(',').ToList()).ToList();
+
+        }
+
+        public CSVDataAdapter(string csvFileName)
+        {
+            string csvContent = File.ReadAllText(csvFileName);
+            this._csvData = csvContent.Split(Environment.NewLine).Select(line => line.Split(',').ToList()).ToList();
         }
 
         public IList<Square> CreateAllSquares()
