@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonopolySimulation", "Monop
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{B8DF9C09-5FD1-4D98-8CBE-A68A769E1668}"
 	ProjectSection(SolutionItems) = preProject
+		chicagoMonopoly.txt = chicagoMonopoly.txt
 		resources\Monopoly Lab Exercise Overview.pdf = resources\Monopoly Lab Exercise Overview.pdf
 	EndProjectSection
 EndProject
