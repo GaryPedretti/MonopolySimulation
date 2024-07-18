@@ -1,0 +1,11 @@
+"Go", "Balbo Avenue", 
+"Community Chest", "Lincoln Avenue", "Income Tax", "Reading Railroad", 
+"Oriental Avenue", "Chance", "Milwaukee Avenue", "Elston Avenue",
+"Jail", "Dearborn Street", "Electric Company", "State Avenue",
+"Wells Avenue", "Pennsylvania Railroad", "La Salle Place", 
+"Community Chest", "Ontario Avenue", "Erie Avenue", "Free Parking",
+"Michigan Avenue", "Chance", "Indiana Avenue", "Illinois Avenue",
+"B & O Railroad", "Atlantic Avenue", "Ventor Avenue", "Water Works",
+"Marvin Gardens", "Go To Jail", "Pacific Avenue", "North Carolina Avenue",
+"Community Chest", "Pennsylvania Avenue", "Short Line Railroad", 
+"Chance", "John Hancock Tower", "Luxury Tax", "Sears Tower"
