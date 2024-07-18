@@ -26,8 +26,14 @@ namespace MonopolySimulation
 
             for (int move = 0; move < numSpaces; move++)
             {
+                if (move != 0)
+                {
+                    CurrentSquare.PassedBy(this);
+                }
                 CurrentSquare = CurrentSquare.NextSquare;
             }
+
+            CurrentSquare.LandedOn(this);
 
             if (die1.FaceValue == die2.FaceValue)
             {

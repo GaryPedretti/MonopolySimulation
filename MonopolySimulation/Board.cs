@@ -10,16 +10,51 @@ namespace MonopolySimulation
 
         public Board()
         {
-            Squares = new List<Square>();
-
-            for (int squareCount = 0; squareCount < defaultNumberOfSquares;  squareCount++)
+            Squares = [
+                new GoSquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new IncomeTaxSquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new PropertySquare(),
+                new LuxuryTaxSquare(),
+                new PropertySquare()
+            ];
+            for (int squareCount = 0; squareCount < Squares.Count - 1 ;  squareCount++)
             {
-                Squares.Add(new());
-            }
-
-            for (int squaresIdx = 0; squaresIdx < Squares.Count - 1; squaresIdx++)
-            {
-                Squares[squaresIdx].NextSquare = Squares[(squaresIdx + 1)];
+                Squares[squareCount].NextSquare = Squares[squareCount + 1];
             }
 
             Squares.Last().NextSquare = Squares.First();

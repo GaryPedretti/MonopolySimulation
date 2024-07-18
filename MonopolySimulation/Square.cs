@@ -1,7 +1,11 @@
 ﻿namespace MonopolySimulation
 {
-    public class Square
+    public interface Square
     {
-        public Square NextSquare { get; internal set; }
+        public string Name { get; }
+        public Square NextSquare { get; set; }
+
+        public void LandedOn(Player player);
+        public void PassedBy(Player player);
     }
 }
